@@ -7,7 +7,7 @@ const upload = require('../utils/slipupload');
 router.post('/create', upload.single('marketingSlip'), campController.createCamp);
 
 // Route for getting all camps
-router.get('/all-camps', campController.getAllCamps);
+router.get('/view-all-camps', campController.getAllCamps);
 
 // Route for getting a single camp by ID
 router.get('/camps/:id', campController.getCampById);
