@@ -18,13 +18,16 @@ const Camp = require('../models/donationModel');
 // };
 createCamp = async (req, res) => {
     try {
-      const { organizerName, mobile, email,date} = req.body;
+      const { organizerName, mobile, email,staff,
+      requiredItems,date} = req.body;
   
       // Create new camp with Cloudinary image URL and other details
       const newCamp = await Camp.create({
         organizerName,
         mobile,
         email,
+        staff,
+        requiredItems,
         date,
         marketingSlip: req.file.path, // URL of the uploaded image
       });

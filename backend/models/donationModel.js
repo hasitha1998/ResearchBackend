@@ -5,6 +5,15 @@ const campSchema = new mongoose.Schema({
   organizerName: String,
   mobile: String,
   email: String,
+  place: String,
+  staff: {
+    type: Number,
+    default: 0
+  },
+  requiredItems: {
+    type: Number,
+    default: 0
+  },
   date: {
     type: Date,
     default: Date.now

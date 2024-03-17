@@ -4,10 +4,10 @@ const campController = require('../controller/donationCamp');
 const upload = require('../utils/slipupload');
 
 // Route for creating a new camp with file upload
-router.post('/camps', upload.single('marketingSlip'), campController.createCamp);
+router.post('/create', upload.single('marketingSlip'), campController.createCamp);
 
 // Route for getting all camps
-router.get('/camps', campController.getAllCamps);
+router.get('/all-camps', campController.getAllCamps);
 
 // Route for getting a single camp by ID
 router.get('/camps/:id', campController.getCampById);
